@@ -1,9 +1,9 @@
 <h1>What Ho, are you Ready to Join the Hunt?!</h1>
 <%= form_for @user do |f| %>
-    <%= f.label :username %>
+    <%= f.label :username, "Your name in The Hunt" %>
     <%= f.text_field :username %> <br>
-    <%= f.label :your_name %>
-    <%= f.text_field :your_name %> <br>
+    <%= f.label :your_name, "Your real name"  %>
+    <%= f.text_field :your_name%> <br>
     <%= f.label :password %>
     <%= f.password_field :password %> <br>
     <%= f.label :password_confirmation %>

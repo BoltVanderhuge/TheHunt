@@ -1,10 +1,21 @@
 
-body  {
+.splash  {
   background-image: url("image-asset.jpeg")
 }
 
-h1{
+#splash_header {
     text-align: center;
-    color: bisque;
+    color: rgb(255, 243, 228);
+    text-shadow: 2px 1px #9b020293;
 
+}
+.login  { 
+  text-align: left;
+  font-family: "Georgia";
+  color: rgb(255, 243, 228);
+  border: rgba(73, 76, 236, 0.629) 2px solid;
+  background: rgba(134, 16, 0, 0.752);
+  border-radius: 20%;
+  margin: auto;
+  
 }

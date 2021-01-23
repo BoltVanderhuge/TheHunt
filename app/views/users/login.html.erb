@@ -1,0 +1,12 @@
+<h1>Rejoin in the Hunt</h1>
+
+<%= form_tag "/logging_in", method: "post" do %>
+    <%= label_tag :username, "Your name in The Hunt" %>
+    <%= text_field_tag :username %>
+
+    <%= label_tag :password %>
+    <%= password_field_tag :password %>
+
+    <%= submit_tag "Login" %>
+
+<% end %>
