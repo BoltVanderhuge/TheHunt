@@ -1,0 +1,8 @@
+<h1> Better be quick and make sure you don't have any biscuits on you or the dogs will eat them right up, they will </p>
+
+<p>
+<%= form_tag(level_2_path, method: :get) do %>
+<%= text_field_tag(:guess, params[:guess])%>
+<%= submit_tag ("I think this is the answer") %>
+<% end %>
+<p>
