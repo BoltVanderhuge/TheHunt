@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :destroy]
-  
+  skip_before_action :authorized, only: [:new, :create, :login, :logging_in]
   def new
     @user = User.new
   end
@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to new_user_path
+    redirect_to "/"
   end
 
 private

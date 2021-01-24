@@ -1,8 +1,13 @@
 <h1>P-p-p-p-p-place holder</h1>
-<p><%= @user.your_name%>
-
+<p>
+    <%= @user.your_name%>
 </p>
 <%= button_to "Log out", logout_path, method: "delete" %>
 <%= button_to "Begin The Hunt", hp_create_path, method: "post" %>
+<% if current_user.hunt_ids.present?%>
+    <%= button_to "Continue The Hunt", current_level_path,  method: "post" %> 
+<%end%>
+<%= button_to "Retire from the game", delete_user_path, method: "delete" %>
 
 
+<%# <%= current_user.hunts.first.level %> 
