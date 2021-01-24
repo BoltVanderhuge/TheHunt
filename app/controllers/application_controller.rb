@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :check_if_someone_is_logged_in?, :current_user
-  
+    before_action :authorized
     
 
     def current_user
