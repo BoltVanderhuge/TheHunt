@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   get "/hunts/1", to: "hunts#level_1", as: "level_1"
   get "/hunts/2", to: "hunts#level_2", as: "level_2"
   get "/hunts/3", to: "hunts#level_3", as: "level_3"
+  get "/hunts/4", to: "hunts#level_4", as: "level_4"
   root "static#splash_page"
 
-  post "/findinglevel", to: "hunts#level_select", as: "current_level"
+  post "/findinglevel", to: "hunts#level_select", as: "continue_level"
+  get "/redirect", to: "hunts#level_select", as: "current_level"
   
   get "/users/login", to: "users#login", as: "login_user"
   post "/logging_in", to: "users#logging_in"

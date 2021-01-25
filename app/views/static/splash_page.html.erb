@@ -1,5 +1,13 @@
 <h1 id="splash_header"> Tally-Ho! Up for a bit of a Hunt? </h1>
 
+<audio src="trumpet.wav" controls autoplay> </audio>
+
+
+<audio autoplay="autoplay" controls="controls" >
+    <source src="app/assets/audios/riff.mp3" />    
+</audio>
+
+
 <body class='splash'>>
 <% if check_if_someone_is_logged_in? %>
       <p class='login1'> <%= current_user.username %> is ready for The Hunt </p>

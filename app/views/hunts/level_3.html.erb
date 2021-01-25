@@ -1,2 +1,15 @@
-<h6> Think of something to do for this level
-</h6>
+<h1> The Groundskeeper won't let you through unless you give him the secret phrase. Be a good sport and find it out, will you? </h1> </p>
+
+<p>
+<%= form_tag(level_3_path, method: :get) do %>
+<%= text_field_tag(:guess, params[:guess])%>
+<%= submit_tag ("I think this is the phrase") %>
+<% end %>
+<p>
+
+<body id ='gate' >
+    <span id ='hidden_password' >
+        Picadilly Circus
+    </span>
+</body>
+
