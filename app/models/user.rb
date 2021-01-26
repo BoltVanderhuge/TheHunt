@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    has_many :hunt_progressions
+    has_many :hunt_progressions, dependent: :destroy
     has_many :hunts, through: :hunt_progressions
 
     has_secure_password

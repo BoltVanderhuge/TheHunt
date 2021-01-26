@@ -1,13 +1,22 @@
 <h1>P-p-p-p-p-place holder</h1>
 <p>
     <%= @user.your_name%>
+    <% if current_user.hunt_ids.present?%>
+    You are up to level
+    <%= current_user.hunts.ids.first%> 
+    And Your Horses's stamina is currently
+<%= current_user.hunt_progressions.first.horse_stamina%> 
+<%end%>
 </p>
 <%= button_to "Log out", logout_path, method: "delete" %>
 <%= button_to "Begin The Hunt", hp_create_path, method: "post" %>
 <% if current_user.hunt_ids.present?%>
     <%= button_to "Continue The Hunt", continue_level_path,  method: "post" %> 
 <%end%>
-<%= button_to "Retire from the game", delete_user_path, method: "delete" %>
+<%= button_to "Retire from the game", delete_user_path, method: "delete", form_class: "myButton"%>
 
 
-<%# <%= current_user.hunts.first.level %> 
+
+
+
+

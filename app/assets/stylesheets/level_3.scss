@@ -1,0 +1,21 @@
+
+
+.gate {
+    position: relative;
+    display: inline-flex;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+
+.hidden_password {
+  text-align: center; 
+  width:100%; 
+  height:0;
+  font-size: 15px; 
+  line-height: 0;
+  position: absolute; top: 63%; right: 7%;
+  z-index: 0;
+  color: rgba(255, 0, 0, 0);
+  }
+
+

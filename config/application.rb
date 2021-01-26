@@ -12,7 +12,9 @@ module TheHunt
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
-    config.assets.paths << Rails.root.join("app", "assets", "images", "audios")
+    config.assets.paths << Rails.root.join("app", "assets", "images")
+    config.assets.paths << "#{Rails.root}/app/assets/audios"
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #

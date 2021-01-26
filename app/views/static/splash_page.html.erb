@@ -1,12 +1,13 @@
 <h1 id="splash_header"> Tally-Ho! Up for a bit of a Hunt? </h1>
 
-<audio src="trumpet.wav" controls autoplay> </audio>
+<%# <audio src="app/assets/images/trumpet.wav" controls autoplay> </audio>
 
 
 <audio autoplay="autoplay" controls="controls" >
-    <source src="app/assets/audios/riff.mp3" />    
+    <source src="riff.mp3" />    
 </audio>
 
+<%= audio_tag "app/assets/images/trumpet.wav",  :autoplay => true %> %>
 
 <body class='splash'>>
 <% if check_if_someone_is_logged_in? %>

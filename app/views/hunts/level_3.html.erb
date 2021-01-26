@@ -7,9 +7,17 @@
 <% end %>
 <p>
 
-<body id ='gate' >
-    <span id ='hidden_password' >
-        Picadilly Circus
-    </span>
-</body>
+
+ <div class="gate">
+	<div class="hidden_password">Piccadilly Circus</div>
+	<%=image_tag src="gate.jpg" %>
+</div>
+
+<div id="hint3">
+<%= link_to image_tag("hint.png", :alt => "Hint"), level_3_hint_path , :target => "_blank", style: '50%xauto' %>
+</div>
+
+
+
+
 
