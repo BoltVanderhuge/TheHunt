@@ -1,6 +1,6 @@
 class HuntProgressionsController < ApplicationController
   skip_before_action :authorized, only: [:new, :create]
-  
+
   def new
     @hunt_progression = HuntProgression.new
   end
@@ -18,6 +18,7 @@ class HuntProgressionsController < ApplicationController
 
 
   def dead_horse
+   
   end
 
  

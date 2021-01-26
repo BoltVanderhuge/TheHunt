@@ -2,10 +2,10 @@
 <p>
     <%= @user.your_name%>
     <% if current_user.hunt_ids.present?%>
-    You are up to level
-    <%= current_user.hunts.ids.first%> 
-    And Your Horses's stamina is currently
-<%= current_user.hunt_progressions.first.horse_stamina%> 
+    you are up to level
+    <%= current_user.hunts.sort.last.id%> 
+    and Your Horses's stamina is currently
+<%= current_user.hunt_progressions.sort.last.horse_stamina%> 
 <%end%>
 </p>
 <%= button_to "Log out", logout_path, method: "delete" %>
@@ -17,6 +17,10 @@
 
 
 
+<% if current_user.hunt_ids.present?%>
+    The highest level you've gotten to is
+    <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.hunt_id %>
+<%end%>
 
 
 

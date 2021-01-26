@@ -28,8 +28,7 @@ class ApplicationController < ActionController::Base
 
     def killed_the_horse
         if current_user.hunt_progressions.present?
-            @h = HuntProgression.find(current_user.hunt_progressions.ids)
-            @hp = @h.first
+            @hp = HuntProgression.find(current_user.hunt_progressions.sort.last.id)
             if @hp.check_for_dead_horse
                 redirect_to dead_horse_path
             end

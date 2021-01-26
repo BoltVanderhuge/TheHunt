@@ -14,5 +14,8 @@ level_4 = Hunt.create(level: 4, correct_answer: "The Peasantry", points: 40)
 
 hint_level_4 = Hint.create(hunt_id: level_4.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk")
 
+level_5 = Hunt.create(level: 5, correct_answer: "Something", points: 50)
+
+hint_level_5 = Hint.create(hunt_id: level_5.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk")
 
 puts "🌱🌱🌱🌱🌱"
