@@ -1,6 +1,6 @@
 <body class="lvl6-body">
   <%= stylesheet_link_tag "level_6", :media => "all" %>
-  <h1 id="lvl6_h1"> I forgot the combination for my blunderbusses case</h1>
+  <h1 id="lvl6_h1"> I forgot the combination for my blunderbusses case, you better inspect it throughly</h1>
   <br>
   <div class="slider">
     <div class="slides">
@@ -63,11 +63,15 @@
   </div>
 
   <div id="submission">
-    <%= form_tag(level_5_path, method: :get) do %>
+    <%= form_tag(level_6_path, method: :get) do %>
     <%= text_field_tag(:guess, params[:guess])%>
     <%= submit_tag ("I think this is the combo") %>
     <% end %>
   </div>
+
+    <% if @error.present? %>
+            <%=@error%>
+    <% end %>
 
   <div id="hint6">
     <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_6_hint_path , :target => "_blank" %>

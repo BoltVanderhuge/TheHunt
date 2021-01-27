@@ -8,6 +8,9 @@
 	<% end %>
 	<p>
 
+  <% if @error.present? %>
+            <%=@error%>
+        <% end %>
 
 	<div class="gate">
 		<div class="hidden_password">Piccadilly Circus</div>

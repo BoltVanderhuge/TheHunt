@@ -3,20 +3,23 @@
 .splash {
   background-image: url("image-asset.jpeg");
   background-color: #cccccc;
-  
+  text-align: left;
 }
 
 
 .tally {
   position:absolute;
-  top:10px;
+  text-align: center;
+  top:100px;
   right: 500px;
   z-index: 0;
-  text-align: center;
+ 
 }
 
 .login { 
   text-align: left;
+  top: 50px;
+  left: 10px;
   font-family: "Georgia";
   color: rgb(255, 243, 228);
   border: rgba(73, 76, 236, 0.629) 2px solid;
@@ -25,3 +28,7 @@
   margin: auto;  
 }
 
+.rules {
+  bottom: 10px;
+  right: 275px;
+}

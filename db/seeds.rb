@@ -20,6 +20,6 @@ hint_level_5 = Hint.create(hunt_id: level_5.id, hint_text: "Carousel horses do n
 
 level_6 = Hunt.create(level: 6, correct_answer: "351")
 
-hint_level_6 = Hint.create(hunt_id: level_6.id, hint_text: "Inspect Those Boxes")
+hint_level_6 = Hint.create(hunt_id: level_6.id, hint_text: "Inspect those boxes with development tools")
 
 puts "🌱🌱🌱🌱🌱"

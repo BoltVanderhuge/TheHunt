@@ -79,7 +79,6 @@ class HuntsController < ApplicationController
             @hp.failure
             @error = "You have chosen poorly."
         end
-
     end
 
     def win
