@@ -81,6 +81,10 @@ class HuntsController < ApplicationController
         end
     end
 
+    def level_7
+        
+    end
+
     def win
 
     end

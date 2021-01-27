@@ -22,4 +22,7 @@ level_6 = Hunt.create(level: 6, correct_answer: "351")
 
 hint_level_6 = Hint.create(hunt_id: level_6.id, hint_text: "Inspect those boxes with development tools")
 
+level_7 = Hunt.create(level: 7, correct_answer: "vixen")
+
+hint_level_7 = Hint.create(hunt_id: level_7.id, hint_text: "You'll need to login to another user with the hidden attributes")
 puts "🌱🌱🌱🌱🌱"
