@@ -1,19 +1,26 @@
-<h1>What Ho, are you Ready to Join the Hunt?!</h1>
-<%= form_for @user do |f| %>
-    <%= f.label :username, "Your name in The Hunt" %>
+
+<body class="tackroom">
+ <br>
+<div><p><span class='header'>Don't recognize you old boy. Please check in! What Ho, are you Ready to Join the Hunt?!</span></p></div>
+
+<div class="form"><%= form_for @user do |f| %>
+    <%= f.label :username, "Your Name in The Hunt" %>
     <%= f.text_field :username %> <br>
-    <%= f.label :your_name, "Your real name"  %>
+    <%= f.label :your_name, "Your Real Name"  %>
     <%= f.text_field :your_name%> <br>
     <%= f.label :password %>
     <%= f.password_field :password %> <br>
-    <%= f.submit :type => :image, :src => image_path("create-user.PNG"), :style => "height:50px;width:auto;" %>
+    <%= f.submit :type => :image, :src => image_path("create-user.PNG"), :style => "height:75px;width:auto;" %>
     <%end%>
+</div>
 
-    <% if flash[:messages] %>
+<div class="field"><%= link_to image_tag("staging-field.PNG", :size => "285x50"), "/", method: "get" %></div>
+
+<div class="error"> <% if flash[:messages] %>
     <% flash[:messages].each do |message| %>
         <p>
             <%= message %> 
         </p>
     <% end %>
-
-<% end %>
+    <% end %>
+ </div>

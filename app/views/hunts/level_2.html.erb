@@ -1,4 +1,4 @@
-<body>
+<body class="level_2">
     <%= stylesheet_link_tag "level_2", :media => "all" %>
     <h1> Better be quick and make sure you don't have any biscuits on you or the dogs will eat them right up, they will </p>
     <div>
@@ -46,7 +46,7 @@
         <% end %>
 
     <div id="hint2">
-    <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_2_hint_path, :target => "_blank" %>
+    <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_2_hint_path, :target => "_blank" %>
     </div>
 
     <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>

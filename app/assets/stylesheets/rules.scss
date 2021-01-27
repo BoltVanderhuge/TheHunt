@@ -1,0 +1,28 @@
+.rules_background {
+    background-image: url("countryside.jpg");
+    background-color: #cccccc;
+    text-align: left;
+    background-size: cover;
+}
+
+.rules_banner {
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    left: 500px; 
+}
+
+.rules_list {
+	position: absolute;
+    text-align: center;
+    top: 250px;
+    left: 350px;
+	font-size: 30px;
+	font-family: "Georgia";
+	color: rgb(255, 243, 228);
+	text-shadow: 3px 3px black;
+    z-index: 0;
+    border: rgba(251, 201, 62, 0.697) 2px solid;
+	background: rgba(134, 16, 0, 0.752);
+	border-radius: 20%;
+}

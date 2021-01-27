@@ -1,27 +1,102 @@
-.myButton {
-	box-shadow:inset 0px 1px 0px 0px #f29c93;
-	background:linear-gradient(to bottom, #fe1a00 5%, #ce0100 100%);
-	background-color:#fe1a00;
-	border-radius:6px;
-	border:1px solid #d83526;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #b23e35;
+.tackroom{
+	background-image: url("tackroom-background.jpg");
+	background-size: cover;
+	background-color: #cccccc;
+	position: relative;
 }
-.myButton:hover {
-	background:linear-gradient(to bottom, #ce0100 5%, #fe1a00 100%);
-	background-color:#ce0100;
+
+.header { 
+	position: absolute;
+	text-align: center;
+	font-size: 30px;
+	font-family: "Georgia";
+	color: rgb(255, 243, 228);
+	border: rgba(73, 76, 236, 0.629) 2px solid;
+	background: rgba(134, 16, 0, 0.752);
+	border-radius: 20%;
+	margin: auto; 
+	text-shadow: 3px 3px black;
+	z-index: 0;
+ }
+
+ .header2 { 
+	position: absolute;
+	top: 200px;
+	left: 2%;
+	font-size: 20px;
+	font-family: "Georgia";
+	color: rgb(255, 243, 228);
+	border: rgba(73, 76, 236, 0.629) 2px solid;
+	background: rgba(134, 16, 0, 0.752);
+	border-radius: 20%;
+	margin: auto; 
+	text-shadow: 3px 3px black;
+	z-index: 0;
+	margin: 25px 50px 75px 330px;
+ }
+
+.form {
+	position: absolute;
+	text-align: center;
+	top: 200px;
+	right: 400px;
+	font-size: 30px;
+	font-family: "Georgia";
+	color: rgb(254, 254, 254);
+	text-shadow: 3px 3px black;
 }
-.myButton:active {
+
+.error {
+	position: absolute;
+	text-align: center;
+	top: 200px;
+	font-size: 20px;
+	font-family: "Georgia";
+	color: rgb(254, 254, 254);
+	text-shadow: 2px 2px black;
+}
+	
+.field {
+	 position: absolute;
+	 left: 10px;
+	 bottom: 25px;
+}
+
+.show_room{
+	background-image: url("https://www.africahunting.com/media/gun-room.41775/full");
+	background-size: cover;
+	background-color: #cccccc;
+	position: relative;
+	background-repeat: no-repeat;
+}
+
+.trophy {
 	position:relative;
-	top:1px;
+	left: 450px;
 }
 
+.show_buttons{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-around;
+	height: 210px;
+	top: 175px;
+	margin: 25px 50px 75px 590px;
+}
 
-      
+.header3 { 
+	position: relative;
+	top: 175px;
+	left: 2%;
+	font-size: 20px;
+	font-family: "Georgia";
+	color: rgb(255, 243, 228);
+	border: rgba(73, 76, 236, 0.629) 2px solid;
+	background: rgba(134, 16, 0, 0.752);
+	border-radius: 20%;
+	margin: auto; 
+	text-shadow: 3px 3px black;
+	z-index: 0;
+	margin: 25px 50px 75px 395px;
+ }

@@ -1,27 +1,35 @@
-<h1>P-p-p-p-p-place holder</h1>
-<p>
-    Welcome, <%= @user.your_name%>!
+<body class="show_room">
+<div class="trophy" >
+    <%= image_tag src="trophy-room.PNG", :style => "height:150px;width:auto;", alt: "Trophy Room!"%>
+</div>
+
+<div><p><span class='header2'> Welcome, <%= @user.your_name%>!
     <% if current_user.hunt_ids.present?%>
     you are up to level
     <%= current_user.hunt_progressions.sort.last.hunt_id%> 
     and Your Horses's stamina is currently
 <%= current_user.hunt_progressions.sort.last.horse_stamina%> 
 <%end%>
-</p>
+</div></p></span>
+
+<div class='show_buttons'>
 <div><%= link_to image_tag("log-out.PNG", :size => "285x50"), logout_path, method: "delete" %></div>
+<br>
 <div><%= link_to image_tag("begin-hunt.PNG", :size => "285x50"), hp_create_path, method: "post" %></div>
+<br>
 <% if current_user.hunt_ids.present?%>
     <div><%= link_to image_tag("continue-hunt.PNG", :size => "285x50"), continue_level_path,  method: "post" %></div>
 <%end%>
-<div><%= link_to image_tag("retire-user.PNG", :size => "285x100"), delete_user_path, method: "delete"%></div>
+<br>
+<div><%= link_to image_tag("retire-user.PNG", :size => "270x100"), delete_user_path, method: "delete"%></div>
+</div>
 
-
-
+<div><p><span class='header3'>
 <% if current_user.hunt_ids.present?%>
     The highest level you've gotten to is:
     <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.hunt_id%>.
     The horse's stamina was:
     <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.horse_stamina%>.
 <%end%>
-
+</div></p></span>
 

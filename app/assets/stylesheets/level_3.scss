@@ -19,3 +19,27 @@
   }
 
 
+  .level_three {
+    background: linear-gradient(187deg, #58151a, #bc2909, #ba6d09, #71a8ee, #3072e8, #1552c6, #0542a8);
+    background-size: 1400% 1400%;
+
+    -webkit-animation: Sunrise 30s ease infinite;
+    -moz-animation: Sunrise 30s ease infinite;
+    animation: Sunrise 30s ease infinite;
+}
+
+@-webkit-keyframes Sunrise {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@-moz-keyframes Sunrise {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}
+@keyframes Sunrise {
+    0%{background-position:53% 0%}
+    50%{background-position:48% 100%}
+    100%{background-position:53% 0%}
+}

@@ -1,16 +1,18 @@
-<body>
-    <h1>Rejoin the Hunt</h1>
 
-    <%= form_tag "/logging_in", method: "post" do %>
+   <body class="tackroom">
+   <div><p><span class="header">Rejoin the Hunt!</div></p></span>
+
+    <div class= "form"><%= form_tag "/logging_in", method: "post" do %>
         <%= label_tag :username, "Your name in The Hunt" %>
         <%= text_field_tag :username %>
-
+        <br>
         <%= label_tag :password %>
         <%= password_field_tag :password %>
 
         <%= submit_tag "Login" %>
 
     <% end %>
+    </div>
 
-    <%= link_to image_tag("staging-field.PNG", :size => "285x50"), "/", method: "get" %>
-</body>
+    <div class= "field"><%= link_to image_tag("staging-field.PNG", :size => "285x50"), "/", method: "get" %></div>
+

@@ -1,4 +1,5 @@
-<body>
+<body class='level_three'>
+
 	<h1> The Groundskeeper won't let you through unless you give him the secret phrase. Be a good sport and find it out, will you? </h1> </p>
 
 	<p>
@@ -18,7 +19,7 @@
 	</div>
 
 	<div id="hint3">
-	<%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_3_hint_path , :target => "_blank" %>
+	<%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_3_hint_path , :target => "_blank" %>
 	</div>
 
 	<%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
