@@ -1,26 +1,27 @@
 <h1>P-p-p-p-p-place holder</h1>
 <p>
-    <%= @user.your_name%>
+    Welcome, <%= @user.your_name%>!
     <% if current_user.hunt_ids.present?%>
     you are up to level
-    <%= current_user.hunts.sort.last.id%> 
+    <%= current_user.hunt_progressions.sort.last.hunt_id%> 
     and Your Horses's stamina is currently
 <%= current_user.hunt_progressions.sort.last.horse_stamina%> 
 <%end%>
 </p>
-<%= button_to "Log out", logout_path, method: "delete" %>
-<%= button_to "Begin The Hunt", hp_create_path, method: "post" %>
+<div><%= link_to image_tag("log-out.PNG", :size => "285x50"), logout_path, method: "delete" %></div>
+<div><%= link_to image_tag("begin-hunt.PNG", :size => "285x50"), hp_create_path, method: "post" %></div>
 <% if current_user.hunt_ids.present?%>
-    <%= button_to "Continue The Hunt", continue_level_path,  method: "post" %> 
+    <div><%= link_to image_tag("continue-hunt.PNG", :size => "285x50"), continue_level_path,  method: "post" %></div>
 <%end%>
-<%= button_to "Retire from the game", delete_user_path, method: "delete", form_class: "myButton"%>
+<div><%= link_to image_tag("retire-user.PNG", :size => "285x100"), delete_user_path, method: "delete"%></div>
 
 
 
 <% if current_user.hunt_ids.present?%>
-    The highest level you've gotten to is
-    <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.hunt_id %>
+    The highest level you've gotten to is:
+    <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.hunt_id%>.
+    The horse's stamina was:
+    <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.horse_stamina%>.
 <%end%>
-
 
 

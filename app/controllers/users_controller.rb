@@ -58,6 +58,7 @@ class UsersController < ApplicationController
     redirect_to "/"
   end
 
+
 private
   def set_user
     @user = User.find(params[:id])

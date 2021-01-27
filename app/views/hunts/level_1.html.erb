@@ -1,13 +1,20 @@
-<h1> Good Show Old Chap, I see You Decided to Join Us, Well Climb On, Pip Pip </h1>
+<body>
+  <h1> Good Show Old Chap, I see You Decided to Join Us. Well Climb On, Pip Pip! </h1>
 
+  <audio autoplay=""> 
+    <source src="/assets/trumpet.wav">
+  </audio>
 
-<span>
-<%= image_tag "saddle.jpg", :usemap => "#image-map" %>
-</span>
-<map name="image-map">
-    <area target="_self" alt="horse without rider" title="horse without rider" href= "welldoneyoucrackedthecase" coords="260,247,461,410" shape="rect">
+  <span>
+  <%= image_tag "saddle.jpg", :usemap => "#image-map" %>
+  </span>
+  <map name="image-map">
+      <area target="_self" alt="horse without rider" title="horse without rider" href= "welldoneyoucrackedthecase" coords="260,247,461,410" shape="rect">
 
-</map>
-<div id="hint1">
-<%= link_to image_tag("hint.png", :alt => "Hint"), level_1_hint_path , :target => "_blank", style: '50%xauto' %>
-</div>
+  </map>
+  <div id="hint1">
+  <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_1_hint_path , :target => "_blank" %>
+  </div>
+
+  <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+</body>

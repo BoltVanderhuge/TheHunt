@@ -1,0 +1,23 @@
+<body class="splash">
+  <%= stylesheet_link_tag "static", :media => "all" %>
+
+  <div class="tally" >
+    <%= image_tag src="tally-ho.PNG", :style => "height:50px;width:auto;", alt: "Tally Ho!"%>
+  </div>
+
+  <% if check_if_someone_is_logged_in? %>
+    <p class='login'> <%= current_user.username %> is ready for The Hunt </p>
+    <br>
+    <%= link_to image_tag("log-out.PNG", :style => "height:50px;width:auto;"), logout_path, method: "delete" %>
+  <br>
+  <% else %>
+  <div><p><span class='login'>Don't recognize you old boy. Please check in! </span></p></div>
+  <%= link_to image_tag("check-in.PNG", :style => "height:50px;width:auto;"), new_user_path, method: "get" %> 
+  
+  <div><p><span class='login'>That's preposterous, I've been at The Hunt since you were in short pants!  </span></p></div>
+  <%= link_to image_tag("remind-them-button.PNG", :style => "height:50px;width:auto;"), logging_in_path, method: "post"%><br>
+  <body>
+  <%= link_to image_tag("rules-of-play.PNG", :alt => "Rules of Play", :style => "height:50px;width:auto;"), rules_path, :target => "_blank" %></body>
+  <% end %>
+</body>
+

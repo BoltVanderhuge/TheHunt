@@ -1,0 +1,79 @@
+<body class="lvl6-body">
+  <%= stylesheet_link_tag "level_6", :media => "all" %>
+  <h1 id="lvl6_h1"> I forgot the combination for my blunderbusses case</h1>
+  <br>
+  <div class="slider">
+    <div class="slides">
+      <div id="slide-1">
+        1
+      </div>
+      <div id="slide-2">
+        2
+      </div>
+      <div id="First Combination Number">
+        3
+      </div>
+      <div id="slide-4">
+        4
+      </div>
+      <div id="slide-5">
+        5
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <div id="slide-1">
+        1
+      </div>
+      <div id="slide-2">
+        2
+      </div>
+      <div id="slide-3">
+        3
+      </div>
+      <div id="slide-4">
+        4
+      </div>
+      <div id="Second Combination Number">
+        5
+      </div>
+    </div>
+  </div>
+
+  <div class="slider">
+    <div class="slides">
+      <div id="Third Combination Number">
+        1
+      </div>
+      <div id="slide-2">
+        2
+      </div>
+      <div id="slide-3">
+        3
+      </div>
+      <div id="slide-4">
+        4
+      </div>
+      <div id="slide-5">
+        5
+      </div>
+    </div>
+  </div>
+
+  <div id="submission">
+    <%= form_tag(level_5_path, method: :get) do %>
+    <%= text_field_tag(:guess, params[:guess])%>
+    <%= submit_tag ("I think this is the combo") %>
+    <% end %>
+  </div>
+
+  <div id="hint6">
+    <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_6_hint_path , :target => "_blank" %>
+  </div>
+
+  <div id="lvl6_return">
+    <%= link_to image_tag("return-to-stables.PNG", :style => "height:50px;width:auto;"), user_path(current_user), method: "get" %>
+  </div>
+</body>

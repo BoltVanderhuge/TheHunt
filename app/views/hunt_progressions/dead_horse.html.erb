@@ -1,5 +1,11 @@
 <h1>
-Bad Form you rode that horse into the ground
+Bad Form! You rode that horse into the ground!
 </h1>
 
 <%=image_tag src="dead_horse.jpg" %>
+
+ <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+
+ <audio autoplay=""> 
+  <source src="/assets/Taps.mp3">
+</audio>

@@ -1,22 +1,27 @@
 
-.splash  {
+
+.splash {
   background-image: url("image-asset.jpeg");
   background-color: #cccccc;
+  
 }
 
-#splash_header {
-    text-align: center;
-    color: rgb(255, 243, 228);
-    text-shadow: 2px 1px #9b020293;
 
+.tally {
+  position:absolute;
+  top:10px;
+  right: 500px;
+  z-index: 0;
+  text-align: center;
 }
-.login  { 
+
+.login { 
   text-align: left;
   font-family: "Georgia";
   color: rgb(255, 243, 228);
   border: rgba(73, 76, 236, 0.629) 2px solid;
   background: rgba(134, 16, 0, 0.752);
   border-radius: 20%;
-  margin: auto;
-  
+  margin: auto;  
 }
+

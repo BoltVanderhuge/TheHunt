@@ -6,7 +6,7 @@
     <%= f.text_field :your_name%> <br>
     <%= f.label :password %>
     <%= f.password_field :password %> <br>
-    <%= f.submit %>
+    <%= f.submit :type => :image, :src => image_path("create-user.PNG"), :style => "height:50px;width:auto;" %>
     <%end%>
 
     <% if flash[:messages] %>

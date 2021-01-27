@@ -1,6 +1,10 @@
-<h1> In order to Continue I have to know if you are with us or against us, tell me who are the real scoundrels?
-</h1>
+<body>
+    <h1> In order to Continue I have to know if you are with us or against us, tell me who are the real scoundrels?
+    </h1>
 
-<div id="hint4">
-<%= link_to image_tag("hint.png", :alt => "Hint"), level_4_hint_path , :target => "_blank", style: '50%xauto' %>
-</div>
+    <div id="hint4">
+    <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_4_hint_path , :target => "_blank"%>
+    </div>
+
+    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+</body>

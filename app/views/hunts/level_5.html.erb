@@ -1,8 +1,19 @@
-<video width="320" height="240" controls>
-  <source src="assets/scene.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<body>
+    <h1> How many huntsman do you see? </h1>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/L00hML8a3HQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<audio controls autoplay=""> 
-  <source src="assets/trumpet.wav">
-</audio>
+    <p>
+    <%= form_tag(level_5_path, method: :get) do %>
+    <%= text_field_tag(:guess, params[:guess])%>
+    <%= submit_tag ("I think this is the answer") %>
+    <% end %>
+    <p>
+
+    <div id="hint5">
+    <%= link_to image_tag("hint.png", :alt => "Hint", :style => "height:50px;width:auto;"), level_5_hint_path , :target => "_blank"%>
+    </div>
+
+    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+</body>
+
