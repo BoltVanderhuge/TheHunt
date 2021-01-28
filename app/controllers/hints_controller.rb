@@ -38,6 +38,12 @@ def hint_level_6
     @hp.failure
 end
 
+def hint_level_7
+    @hint7 = Hint.find(7).hint_text
+    @hp = HuntProgression.find(current_user.hunt_progressions.sort.last.id)
+    @hp.failure
+end
+
 
 
 end

@@ -14,15 +14,15 @@
 
 .rules_list {
 	position: absolute;
-    text-align: center;
-    top: 250px;
-    left: 350px;
-	font-size: 30px;
+    text-align: left;
+    top: 175px;
+    left: 110px;
+	font-size: 20px;
 	font-family: "Georgia";
-	color: rgb(255, 243, 228);
+	color: rgb(246, 228, 205);
 	text-shadow: 3px 3px black;
     z-index: 0;
     border: rgba(251, 201, 62, 0.697) 2px solid;
 	background: rgba(134, 16, 0, 0.752);
-	border-radius: 20%;
+	border-radius: 5%;
 }

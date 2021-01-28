@@ -1,13 +1,15 @@
 
 <body class="tackroom">
  <br>
-<div><p><span class='header'>Please hand your card to my valet </span></p></div>
+<div><p><span class='header'>Please hand your card to my valet. </span></p></div>
 
 <div class="form"><%= form_for @user do |f| %>
     <%= f.label :username, "Your Name in The Hunt" %>
     <%= f.text_field :username %> <br>
     <%= f.label :your_name, "Your Real Name"  %>
     <%= f.text_field :your_name%> <br>
+    <%= f.label :horse_name, "Your Horse's Name"  %>
+    <%= f.text_field :horse_name%> <br>
     <%= f.label :password %>
     <%= f.password_field :password %> <br>
     <%= f.submit :type => :image, :src => image_path("create-user.PNG"), :style => "height:75px;width:auto;" %>

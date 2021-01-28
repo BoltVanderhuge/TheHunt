@@ -1,26 +1,31 @@
 <body class='level_three'>
 
-	<div class="level_header"> Groundskeeper Dundredge is quite particular about the gate. Be a sport and read the inscription on the gate to him, would you? </div>
-	<br><br><br><br>
-	<p>
+<div class="level_header"> Groundskeeper Dundredge is quite particular about the gate. Be a sport and read the inscription on the gate to him, would you? </div>
+<br><br><br><br>
+<p>
 	<%= form_tag(level_3_path, method: :get) do %>
 	<%= text_field_tag(:guess, params[:guess])%>
 	<%= submit_tag ("I think this is the phrase") %>
 	<% end %>
-	<p>
+<p>
 
-  <% if @error.present? %>
-            <%=@error%>
-        <% end %>
+<div class="error_message3">
+<% if @error.present? %>
+    <%=@error%>
+<% end %>
+</div>
 
-	<div class="gate">
-		<div class="hidden_password">Piccadilly Circus</div>
-		<%=image_tag src="gate.jpg" %>
-	</div>
+<div class="gate">
+	<div class="hidden_password">Piccadilly Circus</div>
+	<%=image_tag src="gate.jpg" %>
+</div>
 
-	<div id="hint3">
+<div id="hint3">
 	<%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_3_hint_path , :target => "_blank" %>
-	</div>
+</div>
 
-	<%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+<div id="return_lvl3">
+<%= link_to image_tag("trophy-room-button.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+</div>
+
 </body>

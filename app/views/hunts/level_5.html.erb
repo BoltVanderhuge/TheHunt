@@ -1,5 +1,5 @@
 <div class="level_header"> Quite a spiffing group we've gathered, eh, old boy? The proper huntsmen, I mean. I'll send Pickerly to have tea served upon our return. How many place settings shall we say? </div>
-<br><br><br>
+<br><br><br><br><br>
 <body class='level_five'>
 
     
@@ -12,14 +12,16 @@
     <% end %>
     <p>
 
+    <div class="error_message"> 
       <% if @error.present? %>
             <%=@error%>
         <% end %>
+    </div>
 
     <div id="hint5">
     <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_5_hint_path , :target => "_blank"%>
     </div>
 
-    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+    <%= link_to image_tag("trophy-room-button.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
 </body>
 

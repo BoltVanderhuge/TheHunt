@@ -25,7 +25,7 @@ class HuntsController < ApplicationController
                 redirect_to level_3_path
             elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
                 @hp.failure
-                @error = "You have chosen poorly."
+                @error = @hunt.error_messages
             end
         end
     end
@@ -41,7 +41,7 @@ class HuntsController < ApplicationController
             redirect_to level_4_path
         elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
             @hp.failure
-            @error = "You have chosen poorly."
+            @error = @hunt.error_messages
         end
     end
 
@@ -57,12 +57,13 @@ class HuntsController < ApplicationController
         end
         @hunt = Hunt.find(current_user.hunt_progressions.sort.last.hunt_id)
         @hp = HuntProgression.find(current_user.hunt_progressions.sort.last.id)
-        if params[:guess].present? && (params[:guess]) == (@hunt.correct_answer)
+        
+        if params[:guess].present? && (["#{@hunt.correct_answer}","five"].include? (params[:guess]).downcase)
             @hp.update(hunt_id: 6)
             redirect_to level_6_path
         elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
             @hp.failure
-            @error = "You have chosen poorly."
+            @error = @hunt.error_messages
         end
     end
 
@@ -77,7 +78,7 @@ class HuntsController < ApplicationController
             redirect_to level_7_path
         elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
             @hp.failure
-            @error = "You have chosen poorly."
+            @error = @hunt.error_messages
         end
     end
 
@@ -92,7 +93,7 @@ class HuntsController < ApplicationController
             redirect_to win_screen_path
         elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
             @hp.failure
-            @error = "You have chosen poorly."
+            @error = @hunt.error_messages
         end
         
     end

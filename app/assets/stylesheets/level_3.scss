@@ -43,3 +43,22 @@
     50%{background-position:48% 100%}
     100%{background-position:53% 0%}
 }
+
+.error_message3{
+  position: relative;
+  font-family: "Georgia";
+  color: rgb(211, 38, 8);
+  text-shadow: 1px 1px black;
+  font-size: 20px;
+}
+#hint3{
+  left: 77%;
+  bottom: 25%;
+  position: relative;
+}
+
+#return_lvl3{
+  left: 70%;
+  bottom: 24%;
+  position: relative;
+}

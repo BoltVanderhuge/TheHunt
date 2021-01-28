@@ -18,7 +18,7 @@ class HuntProgressionsController < ApplicationController
 
 
   def dead_horse
-   
+  
   end
 
  

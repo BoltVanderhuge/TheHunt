@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    new_user = User.create(user_params(:username, :your_name, :password))
+    new_user = User.create(user_params(:username, :your_name, :password, :horse_name))
     if new_user.valid?
       session[:user_id] = new_user.id
       redirect_to user_path(new_user)

@@ -5,7 +5,7 @@
   </div>
   <% if check_if_someone_is_logged_in? %>
     <p class='login'> <%= current_user.username %> is ready for The Hunt!
-    <%= link_to image_tag("log-out.PNG", :style => "height:50px;width:auto;"), logout_path, method: "delete" %>
+     <%= link_to image_tag("trophy-room-button.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
     </p>
   <% else %>
   <div><p><span class='login'>Don't recognize you old boy. Please check in! 

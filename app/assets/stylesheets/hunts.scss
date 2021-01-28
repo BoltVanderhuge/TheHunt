@@ -1,22 +1,43 @@
-#hint1{
+.hint1{
     max-width: 100%;
     height: auto;
-    top: 5px;
-    right: 200px;
+    bottom: 50%;
+    left: 70%;
+    position: relative;
+    
+}
+
+.lvl1_return{
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    bottom: 35%;
+    left: 65%;
 }
 
 .level_header {
-    position:absolute;
-    text-align: center;
-    top: 10px;
-    left: 10px;
+  
     font-family: "Georgia";
     color: rgb(255, 243, 228);
     border: rgba(73, 76, 236, 0.629) 2px solid;
     background: rgba(134, 16, 0, 0.752);
     border-radius: 20%;
     text-shadow: 2px 2px black;
-    font-size: 30px;  
+    font-size: 20px;  
+    position: fixed;
+    top: 7%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.error_message {
+    font-family: "Georgia";
+    color: rgb(211, 38, 8);
+    text-shadow: 1px 1px black;
+    font-size: 20px;  
+    position: fixed;
+    z-index: 1
 }
 
 

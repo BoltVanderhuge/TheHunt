@@ -1,0 +1,47 @@
+.dead_horse_background{
+    background-image: url("https://media.giphy.com/media/7cvMEfMo95vUc/giphy.gif");
+    background-size: cover;
+}
+
+.gravestone { 
+    
+    position: relative;
+    display: inline-flex;
+    z-index: 1;
+    background-color: #ffffff; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.grave_inscription {
+    text-align: center;
+    font-family: Georgia;
+    width: 210px; 
+    font-size: 29px; 
+    position: absolute; top: 45%; right: 34%;
+    z-index: 1;
+    color: rgba(164, 160, 160, 0.882);
+    text-shadow: 2px 2px black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dumb_inscription {
+    text-align: center;
+    font-family: Georgia;
+    width: 210px; 
+    font-size: 18px; 
+    position: absolute; top: 70%; right: 34%;
+    z-index: 1;
+    color: rgba(164, 160, 160, 0.882);
+    text-shadow: 2px 2px black;
+}
+
+.dh_return{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}

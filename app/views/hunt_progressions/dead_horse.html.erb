@@ -1,9 +1,16 @@
+<body class="dead_horse_background"> 
 <div class="level_header">Bad Form! You rode that horse into the ground!</div>
 
-<%=image_tag src="dead_horse.jpg" %>
+<div class="gravestone">		
+	<%=image_tag src="dead_horse,mach 3.5.jpg" %>
+	<div class="grave_inscription">Here Lies<br> <%=current_user.horse_name%></div><br>
+	<div class="dumb_inscription">Gone, but not fortrotten.</div>
+</div>
 
+<div class="dh_return">
  <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
-
+</div>
  <audio autoplay=""> 
   <source src="/assets/Taps.mp3">
 </audio>
+</body>

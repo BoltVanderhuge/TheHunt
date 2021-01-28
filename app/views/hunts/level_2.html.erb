@@ -1,8 +1,8 @@
-<div class="level_header">Say there, the hounds have their hackles up, have you any biscuits about your personage? </div>
+<div class="level_header">Say there, the hounds have their hackles up, have you any biscuits about your personage?</div>
 <br><br><br>
 <body class="level_2">
     <%= stylesheet_link_tag "level_2", :media => "all" %>
-    <div>
+    <div class= "timer_lvl2">
     <ul class="fader2">
     <li id='td30'>30</li>
     <li id='td29'>29</li>
@@ -42,13 +42,17 @@
     <%= submit_tag ("I think this is the answer") %>
     <% end %>
     <p>
-        <% if @error.present? %>
+    
+    <div class="error_message"> 
+    <% if @error.present? %>
             <%=@error%>
         <% end %>
+    </div>
 
     <div id="hint2">
     <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_2_hint_path, :target => "_blank" %>
     </div>
-
-    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+    <div id="return_lvl2">
+    <%= link_to image_tag("trophy-room-button.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+    </div>
 </body>

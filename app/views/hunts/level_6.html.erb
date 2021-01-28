@@ -70,16 +70,18 @@
     <% end %>
   </div>
 
+<div class="error_message"> 
     <% if @error.present? %>
-            <%=@error%>
+        <%=@error%>
     <% end %>
+</div>
 
   <div id="hint6">
     <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_6_hint_path , :target => "_blank" %>
   </div>
 
   <div id="lvl6_return">
-    <%= link_to image_tag("return-to-stables.PNG", :style => "height:50px;width:auto;"), user_path(current_user), method: "get" %>
+    <%= link_to image_tag("trophy-room-button.PNG", :style => "height:50px;width:auto;"), user_path(current_user), method: "get" %>
   </div>
 
 
