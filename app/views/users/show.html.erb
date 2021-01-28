@@ -7,7 +7,7 @@
     <% if current_user.hunt_ids.present?%>
     you are up to level
     <%= current_user.hunt_progressions.sort.last.hunt_id%> 
-    and Your Horses's stamina is currently
+    and Your Horse's stamina is currently
 <%= current_user.hunt_progressions.sort.last.horse_stamina%> 
 <%end%>
 </div></p></span>
@@ -26,9 +26,9 @@
 
 <div><p><span class='header3'>
 <% if current_user.hunt_ids.present?%>
-    The highest level you've gotten to is:
+    The highest level you've reached is:
     <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.hunt_id%>.
-    The horse's stamina was:
+    Your Horse's stamina was:
     <%=current_user.hunt_progressions.sort_by{|hp|hp.hunt_id}.last.horse_stamina%>.
 <%end%>
 </div></p></span>

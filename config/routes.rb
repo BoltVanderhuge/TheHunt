@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   get "/hunts/5", to: "hunts#level_5", as: "level_5"
   get "/hunts/slide_slide_slippity_slide", to: "hunts#level_6", as: "level_6"
   get "/hunts/game-over", to: "hunts#win", as: "win_screen"
-
+  get "/hunts/7", to: "hunts#level_7", as: "level_7"
   
   # get '*unmatched_route', to: 'application#raise_not_found'
 

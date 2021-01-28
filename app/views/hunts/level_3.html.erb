@@ -1,7 +1,7 @@
 <body class='level_three'>
 
-	<h1> The Groundskeeper won't let you through unless you give him the secret phrase. Be a good sport and find it out, will you? </h1> </p>
-
+	<div class="level_header"> The Groundskeeper won't let you through unless you give him the secret phrase. Be a good sport and find it out, will you? </div>
+	<br><br><br><br>
 	<p>
 	<%= form_tag(level_3_path, method: :get) do %>
 	<%= text_field_tag(:guess, params[:guess])%>

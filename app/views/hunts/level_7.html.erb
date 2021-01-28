@@ -1,7 +1,20 @@
+<body class= "level_seven" >
+<h1> Looks like some weather is coming in, quick pretend to be the Lord Govenor and tell it to stop that rubbish  </h1>
+    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
  <div id="hint7">
     <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_7_hint_path , :target => "_blank" %>
   </div>
+  <div class="storm"></div>
 
-<body>
-    <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
+<p id="login_deets"> username: Lord Governor Chasslesworth
+    password: longlivethequeen
+</p>
+
+<p>
+    <%= form_tag(level_7_path, method: :get) do %>
+    <%= text_field_tag(:guess, params[:guess])%>
+    <%= submit_tag ("I say:") %>
+    <% end %>
+    <p>
+
 </body>
