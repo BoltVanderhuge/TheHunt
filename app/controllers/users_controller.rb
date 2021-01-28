@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :destroy]
   skip_before_action :authorized, only: [:new, :create, :login, :logging_in]
+  skip_before_action :is_govenor, only: [:govenor_page, :logout]
   def new
     @user = User.new
   end
@@ -33,18 +34,24 @@ class UsersController < ApplicationController
   end
 
   def login
+    
   end
 
   def logging_in
       @user = User.find_by(username: params[:username])
-
       if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
           redirect_to user_path(@user)
       else
           redirect_to login_user_path
       end
+  end
 
+  def govenor_page
+   
+  end
+
+  def fox
   end
 
 

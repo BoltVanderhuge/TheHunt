@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
     helper_method :check_if_someone_is_logged_in?, :current_user
-    before_action :authorized
+    before_action :authorized, :is_govenor
    
     def current_user
         @current_user ||= User.find_by(id: session[:user_id])
@@ -32,5 +32,12 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def is_govenor
+        if current_user.present?
+            if current_user.username == "Lord Governor Chasslesworth"
+                redirect_to govenor_path
+            end
+        end
+    end
 
 end

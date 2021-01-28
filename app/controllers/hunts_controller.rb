@@ -82,6 +82,18 @@ class HuntsController < ApplicationController
     end
 
     def level_7
+        if current_user.hunt_progressions.sort.last.hunt_id !=7
+            redirect_to current_level_path
+        end
+        @hunt = Hunt.find(current_user.hunt_progressions.sort.last.hunt_id)
+        @hp = HuntProgression.find(current_user.hunt_progressions.sort.last.id)
+        if params[:guess].present? && (params[:guess]) == (@hunt.correct_answer)
+            @hp.update(hunt_id: 8)
+            redirect_to win_screen_path
+        elsif params[:guess].present? && (params[:guess]) != (@hunt.correct_answer)
+            @hp.failure
+            @error = "You have chosen poorly."
+        end
         
     end
 
@@ -105,6 +117,8 @@ class HuntsController < ApplicationController
             redirect_to level_6_path
         elsif current_user.hunt_progressions.sort.last.hunt_id == 7
             redirect_to level_7_path
+        elsif current_user.hunt_progressions.sort.last.hunt_id == 8
+            redirect_to win_screen_path
         end
     end
 
@@ -120,9 +134,5 @@ class HuntsController < ApplicationController
 
     
 
-private
 
-    # def set_hunt
-    #     @hunt = Hunt.find(current_user.hunts.ids)
-    # end
 end

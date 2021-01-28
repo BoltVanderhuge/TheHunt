@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get "/redirect", to: "hunts#level_select", as: "current_level"
   
   get "/rules", to: "rules#rules", as: "rules"
+
+  get "/users/Hidden-Page", to: "users#fox", as: "fox"
+  get "/users/Govenors-Page", to: "users#govenor_page", as: "govenor"
   get "/users/login", to: "users#login", as: "login_user"
   post "/logging_in", to: "users#logging_in"
   delete "/logout", to: "users#logout", as: "logout"
