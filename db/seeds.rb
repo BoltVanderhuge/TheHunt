@@ -12,11 +12,11 @@ hint_level_3 = Hint.create(hunt_id: level_3.id, hint_text: " Take a look in your
 
 level_4 = Hunt.create(level: 4, correct_answer: "The Peasantry")
 
-hint_level_4 = Hint.create(hunt_id: level_4.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk")
+hint_level_4 = Hint.create(hunt_id: level_4.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk, find the opposite the incorrect word in there")
 
 level_5 = Hunt.create(level: 5, correct_answer: "5")
 
-hint_level_5 = Hint.create(hunt_id: level_5.id, hint_text: "Carousel horses do not count!")
+hint_level_5 = Hint.create(hunt_id: level_5.id, hint_text: "Count the huntsman in the video carousel horse riders do not count!")
 
 level_6 = Hunt.create(level: 6, correct_answer: "351")
 
@@ -25,4 +25,9 @@ hint_level_6 = Hint.create(hunt_id: level_6.id, hint_text: "Inspect those boxes 
 level_7 = Hunt.create(level: 7, correct_answer: "vixen")
 
 hint_level_7 = Hint.create(hunt_id: level_7.id, hint_text: "You'll need to login to another user with the hidden attributes")
+
+User.create(your_name: "Shunt McGupin", username: "Lord Governor Chasslesworth", password: "rulebritannia")
+
+win_screen = Hunt.create(level: 8, correct_answer: "You Beat The Game!")
+
 puts "🌱🌱🌱🌱🌱"

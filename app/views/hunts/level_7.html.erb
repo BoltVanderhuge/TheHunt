@@ -1,5 +1,7 @@
 <body class= "level_seven" >
-<h1> Looks like some weather is coming in, quick pretend to be the Lord Govenor and tell it to stop that rubbish  </h1>
+<h1> And here's a classic English afternoon lightning storm! I say, if you head back to the stables and return disguised as the Lord Governor, I imagine you'll find a way to dispel this weather with but a word. Hop to it, lad!  </h1>
+    
+    
     <%= link_to image_tag("return-to-stables.PNG", :size => "285x50"), user_path(current_user), method: "get" %>
  <div id="hint7">
     <%= link_to image_tag("lightbulb.png", :alt => "Hint", :style => "height:100px;width:auto;"), level_7_hint_path , :target => "_blank" %>
@@ -7,7 +9,7 @@
   <div class="storm"></div>
 
 <p id="login_deets"> username: Lord Governor Chasslesworth
-    password: longlivethequeen
+    password: rulebritannia
 </p>
 
 <p>
@@ -15,6 +17,6 @@
     <%= text_field_tag(:guess, params[:guess])%>
     <%= submit_tag ("I say:") %>
     <% end %>
-    <p>
+</p>
 
 </body>
