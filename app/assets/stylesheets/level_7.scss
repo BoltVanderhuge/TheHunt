@@ -14,8 +14,8 @@
 }
 
 @keyframes flash{ 
-  0%,  80% {background-color:black}
-  81%, 100% {background-color:#fff} 
+  0%,  95%, 98% {background-color:black}
+  96%, 99%, 100% {background-color:#fff} 
 }
 
 #login_deets {
@@ -23,9 +23,39 @@
 	z-index: 1;
 	user-select: none;
 	font-family: Georgia;
-	top:100px
+	top:100px;
+	position: fixed;
+	top: 50%;
+	left: 30%;
 }
 
 #level7_form {
-	top:100px;
+	position: fixed;
+	top: 60%;
+	left: 40%;
+}
+
+#lvl7_return{
+    position:absolute;
+    bottom:10px;
+    right: 10px;
+    z-index: 0;
+ }
+
+ #hint7 {
+   position: absolute;
+   bottom: 60px;
+   right: 100px;
+
+ }
+
+ .error_message {
+    font-family: "Georgia";
+    color: rgb(211, 38, 8);
+    text-shadow: 1px 1px black;
+    font-size: 20px;  
+    position: fixed;
+	z-index: 1;
+	top: 55%;
+	left: 40%;
 }

@@ -157,14 +157,15 @@ background-size: cover;
     top: 40%;
 }
 
-#hint2{
-    left: 77%;
-    top: 45%;
-    position: relative;
-}
-
 #return_lvl2{
-    left: 70%;
-    top: 45%;
-    position: relative;
-}
+    position:absolute;
+    bottom:10px;
+    right: 10px;
+  
+ }
+
+ #hint2 {
+   position: absolute;
+   bottom: 60px;
+   right: 100px;
+ }

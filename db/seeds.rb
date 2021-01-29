@@ -12,7 +12,7 @@ hint_level_3 = Hint.create(hunt_id: level_3.id, hint_text: "The phrase is hidden
 
 level_4 = Hunt.create(level: 4, correct_answer: "The Peasantry")
 
-hint_level_4 = Hint.create(hunt_id: level_4.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk, find the opposite of the incorrect word in there.")
+hint_level_4 = Hint.create(hunt_id: level_4.id, hint_text: "Something about our URL does not reflect our utter disdain for commonfolk, find the opposite of the incorrect phrase and place it in there.")
 
 level_5 = Hunt.create(level: 5, correct_answer: "5")
 
