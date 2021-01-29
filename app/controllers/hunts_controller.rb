@@ -99,7 +99,9 @@ class HuntsController < ApplicationController
     end
 
     def win
-
+        if current_user.hunt_progressions.sort.last.hunt_id !=8
+            redirect_to current_level_path
+        end
     end
 
 

@@ -18,8 +18,11 @@ class HuntProgressionsController < ApplicationController
 
 
   def dead_horse
-  
+    current_user.update(dead_horse_count: (current_user.dead_horse_count + 1))
+    dead_horse_number = current_user.dead_horse_count
+    @fullname = current_user.horse_name + " " + ((dead_horse_number).to_roman)
   end
 
+ 
  
 end

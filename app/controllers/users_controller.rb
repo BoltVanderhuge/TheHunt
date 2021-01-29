@@ -52,6 +52,9 @@ class UsersController < ApplicationController
   end
 
   def fox
+    if current_user.hunts.sort.last.id !=8
+      redirect_to current_level_path
+    end
   end
 
 

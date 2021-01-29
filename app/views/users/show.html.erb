@@ -33,6 +33,10 @@
 <%end%>
 </div></p></span>
 
+  <div class="rules">
+    <%= link_to image_tag("rules-of-play.PNG", :alt => "Rules of Play", :style => "height:125px;width:auto;"), rules_path, :target => "_blank" %>
+    </div>
+
 <div><p><span class='secret'>
 <% if current_user.hunt_ids.sort.last == 8%>
     <div><%= link_to image_tag("https://image.flaticon.com/icons/png/512/2938/2938235.png"), fox_path,  method: "get" %></div>
